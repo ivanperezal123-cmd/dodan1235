@@ -1541,4 +1541,9 @@ UserInputService.InputBegan:Connect(function(i, gp)
     end
 end)
 
+-- ── Toggle global para cmd.lua ────────────────────────────────────────────────
+_G.__DODAN_TOGGLE = function()
+    win.Visible = not win.Visible
+end
+
 print("[DOD_AN v5] Cargado ✅ | RightAlt = toggle | CoolKid style")
