@@ -14,11 +14,7 @@ do
     local attempts = {
         function() return request end,
         function() return http_request end,
-        function() return syn and syn.request end,
-        function() return fluxus and fluxus.request end,
         function() return http and http.request end,
-        function() return getfenv()["request"] end,
-        function() return getfenv()["http_request"] end,
     }
     for _, attempt in ipairs(attempts) do
         local ok, fn = pcall(attempt)
